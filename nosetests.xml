@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="18" errors="5" failures="0" skip="0"><testcase classname="base.util_test" name="test_ceil" time="0.000"></testcase><testcase classname="base.util_test" name="test_human_info" time="0.000"></testcase><testcase classname="base.util_test" name="test_get_val_ex" time="0.000"></testcase><testcase classname="base.util_test" name="test_json" time="0.000"></testcase><testcase classname="base.util_test" name="test_get_md5" time="0.000"></testcase><testcase classname="base.util_test" name="test_get_suffix" time="0.000"></testcase><testcase classname="base.util_test" name="test_transcode" time="0.000"></testcase><testcase classname="base.util_test" name="test_separate_file_name" time="0.000"></testcase><testcase classname="base.util_test" name="test_filetype_valid" time="0.000"></testcase><testcase classname="base.util_test" name="test_filetype2contenttype" time="0.000"></testcase><testcase classname="api_test" name="test" time="0.001"><error type="exceptions.SystemExit" message="2"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/usr/local/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/opt/hbase-store/api_test.py", line 14, in test
+    assert_is_none(image_get('test', '11', '2', '3', 'jpg'))
+  File "/opt/hbase-store/api_v1.py", line 64, in image_get
+    batch = batch_manager.get_last_batch(track_id, tpid, tpe, seq, image_type)
+  File "/opt/hbase-store/batch_manager.py", line 47, in get_last_batch
+    batch_list = get_batch_list(track_id, tpid, tpe, seq, image_type)
+  File "/opt/hbase-store/batch_manager.py", line 54, in get_batch_list
+    table = get_table_name()
+  File "/opt/hbase-store/batch_manager.py", line 18, in get_table_name
+    env = opt.option().env
+  File "/opt/hbase-store/base/opt.py", line 12, in option
+    (options, args) = parser.parse_args()
+  File "/usr/lib/python2.7/optparse.py", line 1402, in parse_args
+    self.error(str(err))
+  File "/usr/lib/python2.7/optparse.py", line 1584, in error
+    self.exit(2, "%s: error: %s\n" % (self.get_prog_name(), msg))
+  File "/usr/lib/python2.7/optparse.py", line 1574, in exit
+    sys.exit(status)
+SystemExit: 2
+]]></error><system-err><![CDATA[Usage: nosetests [options]
+
+nosetests: error: no such option: --with-xunit
+]]></system-err></testcase><testcase classname="api_v1_test" name="test" time="0.000"><error type="exceptions.SystemExit" message="2"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/usr/local/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/opt/hbase-store/api_v1_test.py", line 14, in test
+    assert_is_none(image_get('test', '11', '2', '3', 'jpg'))
+  File "/opt/hbase-store/api_v1.py", line 64, in image_get
+    batch = batch_manager.get_last_batch(track_id, tpid, tpe, seq, image_type)
+  File "/opt/hbase-store/batch_manager.py", line 47, in get_last_batch
+    batch_list = get_batch_list(track_id, tpid, tpe, seq, image_type)
+  File "/opt/hbase-store/batch_manager.py", line 54, in get_batch_list
+    table = get_table_name()
+  File "/opt/hbase-store/batch_manager.py", line 18, in get_table_name
+    env = opt.option().env
+  File "/opt/hbase-store/base/opt.py", line 12, in option
+    (options, args) = parser.parse_args()
+  File "/usr/lib/python2.7/optparse.py", line 1402, in parse_args
+    self.error(str(err))
+  File "/usr/lib/python2.7/optparse.py", line 1584, in error
+    self.exit(2, "%s: error: %s\n" % (self.get_prog_name(), msg))
+  File "/usr/lib/python2.7/optparse.py", line 1574, in exit
+    sys.exit(status)
+SystemExit: 2
+]]></error><system-err><![CDATA[Usage: nosetests [options]
+
+nosetests: error: no such option: --with-xunit
+]]></system-err></testcase><testcase classname="api_v2_test" name="test" time="0.000"><error type="exceptions.SystemExit" message="2"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/usr/local/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/opt/hbase-store/api_v2_test.py", line 14, in test
+    assert_is_none(image_get('test', '11', '2', '3', 'jpg'))
+  File "/opt/hbase-store/api_v2.py", line 69, in image_get
+    batch = batch_manager.get_last_batch(track_id, tpid, tpe, seq, image_type)
+  File "/opt/hbase-store/batch_manager_v2.py", line 52, in get_last_batch
+    batch_list = get_batch_list(track_id, tpid, tpe, seq, image_type)
+  File "/opt/hbase-store/batch_manager_v2.py", line 59, in get_batch_list
+    table = get_table_name()
+  File "/opt/hbase-store/batch_manager_v2.py", line 23, in get_table_name
+    env = opt.option().env
+  File "/opt/hbase-store/base/opt.py", line 12, in option
+    (options, args) = parser.parse_args()
+  File "/usr/lib/python2.7/optparse.py", line 1402, in parse_args
+    self.error(str(err))
+  File "/usr/lib/python2.7/optparse.py", line 1584, in error
+    self.exit(2, "%s: error: %s\n" % (self.get_prog_name(), msg))
+  File "/usr/lib/python2.7/optparse.py", line 1574, in exit
+    sys.exit(status)
+SystemExit: 2
+]]></error><system-err><![CDATA[Usage: nosetests [options]
+
+nosetests: error: no such option: --with-xunit
+]]></system-err></testcase><testcase classname="batch_test" name="test" time="0.000"><error type="exceptions.SystemExit" message="2"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/usr/local/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/opt/hbase-store/batch_test.py", line 14, in test
+    assert_true(clear_batch('test', '1', '2', '3', 'jpg'))
+  File "/opt/hbase-store/batch_manager.py", line 99, in clear_batch
+    table = get_table_name()
+  File "/opt/hbase-store/batch_manager.py", line 18, in get_table_name
+    env = opt.option().env
+  File "/opt/hbase-store/base/opt.py", line 12, in option
+    (options, args) = parser.parse_args()
+  File "/usr/lib/python2.7/optparse.py", line 1402, in parse_args
+    self.error(str(err))
+  File "/usr/lib/python2.7/optparse.py", line 1584, in error
+    self.exit(2, "%s: error: %s\n" % (self.get_prog_name(), msg))
+  File "/usr/lib/python2.7/optparse.py", line 1574, in exit
+    sys.exit(status)
+SystemExit: 2
+]]></error><system-err><![CDATA[Usage: nosetests [options]
+
+nosetests: error: no such option: --with-xunit
+]]></system-err></testcase><testcase classname="batch_v2_test" name="test" time="0.000"><error type="exceptions.SystemExit" message="2"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/usr/local/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/opt/hbase-store/batch_v2_test.py", line 14, in test
+    assert_true(clear_batch('test', '1', '2', '3', 'jpg'))
+  File "/opt/hbase-store/batch_manager_v2.py", line 104, in clear_batch
+    table = get_table_name()
+  File "/opt/hbase-store/batch_manager_v2.py", line 23, in get_table_name
+    env = opt.option().env
+  File "/opt/hbase-store/base/opt.py", line 12, in option
+    (options, args) = parser.parse_args()
+  File "/usr/lib/python2.7/optparse.py", line 1402, in parse_args
+    self.error(str(err))
+  File "/usr/lib/python2.7/optparse.py", line 1584, in error
+    self.exit(2, "%s: error: %s\n" % (self.get_prog_name(), msg))
+  File "/usr/lib/python2.7/optparse.py", line 1574, in exit
+    sys.exit(status)
+SystemExit: 2
+]]></error><system-err><![CDATA[Usage: nosetests [options]
+
+nosetests: error: no such option: --with-xunit
+]]></system-err></testcase><testcase classname="hbase_test" name="test" time="0.000"></testcase><testcase classname="hbase_util_test" name="test1" time="0.000"></testcase><testcase classname="rowkey_test" name="test" time="0.000"></testcase></testsuite>

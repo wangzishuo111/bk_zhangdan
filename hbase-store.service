@@ -1,0 +1,14 @@
+[Unit]
+Description=hbase-store
+
+[Service]
+WorkingDirectory=/opt/hbase-store
+ExecStart=/usr/bin/python service.py -g -e prd -p 8888
+Restart=on-failure
+Type=simple
+User=hadoop
+Group=hadoop
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
